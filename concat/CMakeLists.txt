@@ -21,11 +21,9 @@ target_include_directories(
     ${LLVM_INCLUDE_DIRS}
 )
 
-llvm_map_components_to_libnames(llvm_libs support)
-
 target_link_libraries(
   concat
   PRIVATE
-    ${llvm_libs}
+    LLVM-10
     clang-10
 )
